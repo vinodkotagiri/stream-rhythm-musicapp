@@ -22,6 +22,7 @@ const TopPlay = () => {
 
 	const { data } = useGetTopChartsQuery()
 	const divRef = useRef(null)
+
 	const topPlays = data?.slice(0, 5)
 
 	useEffect(() => {
@@ -49,7 +50,7 @@ const TopPlay = () => {
 					</Link>
 				</div>
 				<div className='mt-4 flex flex-col gap-1'>
-					{topPlays.map((song, i) => (
+					{topPlays?.map((song, i) => (
 						<TopChartCard song={song} i={i} key={song.key} />
 					))}
 				</div>
@@ -71,7 +72,7 @@ const TopPlay = () => {
 					centeredSlidesBounds
 					modules={[FreeMode]}
 					className='mt-4'>
-					{topPlays.map((song, i) => (
+					{topPlays?.map((song, i) => (
 						<SwiperSlide
 							key={song.key}
 							style={{ width: '25%', height: 'auto' }}
