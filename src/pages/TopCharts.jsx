@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-
-import axios from 'axios'
+import React from 'react'
 import { Error, Loader, SongCard } from '../components'
 import { useSelector } from 'react-redux'
 import { useGetTopChartsQuery } from '../redux/services/shazamCore'
