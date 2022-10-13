@@ -15,7 +15,7 @@ const Discover = () => {
 		genreListId || 'POP'
 	)
 
-	const genreTitle = genres.find(({ value }) => value === genreListId).title
+	const genreTitle = genres.find(({ value }) => value === genreListId)?.title
 	if (isFetching) return <Loader title='Loading Songs...' />
 	if (error) return <Error title='Error loading charts' />
 	return (
