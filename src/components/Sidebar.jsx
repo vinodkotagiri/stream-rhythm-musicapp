@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { logo } from '../assets'
 import { links } from '../assets/constants'
 import { RiCloseLine } from 'react-icons/ri'
@@ -29,7 +29,9 @@ const Sidebar = () => {
 		<Fragment>
 			{/* LARGE SCREEN MENU */}
 			<div className='md:flex hidden flex-col w-[240px] p-3 bg-[#191624]'>
-				<img src={logo} alt='logo' className='' />
+				<Link to='/'>
+					<img src={logo} alt='logo' className='' />
+				</Link>
 				<hr className='h-0.5 bg-[#6741d9]' />
 				<NavLinks />
 			</div>
